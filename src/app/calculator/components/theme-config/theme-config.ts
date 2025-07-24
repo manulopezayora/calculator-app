@@ -1,5 +1,6 @@
 import { NgStyle } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { Theme, ThemeService } from '../../services/theme-service';
 
 @Component({
     selector: 'theme-config',
@@ -8,20 +9,23 @@ import { Component, signal } from '@angular/core';
     styleUrl: './theme-config.scss'
 })
 export class ThemeConfig {
-    public theme = signal<number>(1);
+    private themeService = inject(ThemeService);
+    themes: Theme[] = ['dark', 'light', 'purple'];
+
+    public theme = computed(() => this.themeService.currentTheme());
 
     public onThemeChange(event: Event): void {
-        const input = event.target as HTMLInputElement;
-        this.theme.set(parseInt(input.value, 10));
+        const value = (event.target as HTMLInputElement).value;
+        this.themeService.setTheme(this.themes[Number(value)]);
     }
 
     public getThumbPosition(): string {
-        switch (this.theme()) {
-            case 1:
+        switch (this.themeService.currentTheme()) {
+            case 'dark':
                 return '3px';
-            case 2:
+            case 'light':
                 return '25px';
-            case 3:
+            case 'purple':
                 return '47px';
             default:
                 return '3px';

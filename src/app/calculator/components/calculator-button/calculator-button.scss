@@ -15,31 +15,31 @@ button {
     height: 80px;
     width: 100%;
     border-radius: 5px;
-    color: hsl(221, 14%, 31%);
-    background-color: hsl(0, 0%, 90%);
-    box-shadow: 0px 5px hsl(28, 16%, 65%);
+    color: var(--key-text);
+    background-color: var(--key-background);
+    box-shadow: 0px 5px var(--key-shadow);
 }
 
 button:hover {
-    background-color: hsl(0, 0%, 95%);
+    background-color: var(--key-background-hover);
 }
 
 .special {
-    color: hsl(0, 100%, 100%);
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0px 5px hsl(224, 28%, 35%);
+    color: var(--special-key-text);
+    background-color: var(--special-key-background);
+    box-shadow: 0px 5px var(--special-key-shadow);
 }
 
 .special:hover {
-    background-color: hsl(225, 21%, 54%);
+    background-color: var(--special-key-background-hover);
 }
 
 .equal {
-    color: hsl(0, 100%, 100%);
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: 0px 5px hsl(6, 70%, 34%);
+    color: var(--equal-key-text);
+    background-color: var(--equal-key-background);
+    box-shadow: 0px 5px var(--equal-key-shadow);
 }
 
 .equal:hover {
-    background-color: hsl(6, 63%, 55%);
+    background-color: var(--equal-key-background-hover);
 }

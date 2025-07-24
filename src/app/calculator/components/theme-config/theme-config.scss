@@ -6,13 +6,13 @@ header {
 
     h1 {
         font-size: 1.8rem;
-        color: white;
+        color: var(--screen-text);
     }
 
     .theme-toggle {
         display: flex;
         align-items: center;
-        color: white;
+        color: var(--screen-text);
         font-weight: bold;
         gap: 2rem;
 
@@ -42,7 +42,7 @@ header {
 
             .toggle-switch {
                 position: relative;
-                background: hsl(223, 31%, 20%);
+                background: var(--toggle-background);;
                 width: 70px;
                 height: 25px;
                 border-radius: 20px;
@@ -52,7 +52,7 @@ header {
                     top: 3px;
                     width: 20px;
                     height: 20px;
-                    background: #f44336;
+                    background: var(--equal-key-background);
                     border-radius: 50%;
                     transition: left 0.3s ease;
                     z-index: 1;
