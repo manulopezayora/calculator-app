@@ -19,7 +19,7 @@ export class CalculatorService {
             return;
         }
 
-        if (this.resultText().length >= 10) {
+        if (this.resultText().length >= 20 && ![...operators, ...specialOperators].includes(value)) {
             console.error('Max length reached');
 
             return;
