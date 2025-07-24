@@ -1,0 +1,45 @@
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+    border: none;
+    height: 80px;
+    width: 100%;
+    border-radius: 5px;
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: 0px 5px hsl(28, 16%, 65%);
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.special {
+    color: hsl(0, 100%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 5px hsl(224, 28%, 35%);
+}
+
+.special:hover {
+    background-color: hsl(225, 21%, 54%);
+}
+
+.equal {
+    color: hsl(0, 100%, 100%);
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 5px hsl(6, 70%, 34%);
+}
+
+.equal:hover {
+    background-color: hsl(6, 63%, 55%);
+}
