@@ -12,7 +12,7 @@ export class CalculatorButton {
     public onClick = output<string>();
     public contentValue = viewChild<ElementRef<HTMLButtonElement>>('button');
 
-    public handleClick() {
+    public handleClick(): void {
         if (!this.contentValue()?.nativeElement) {
             return;
         }

@@ -37,10 +37,6 @@ export default class CalculatorView {
     public handleKeyBoardEvent(event: KeyboardEvent): void {
         const key = event.key;
         const keyValue = KEY_EQUIVALENTS[key] ?? key;
-
         this.handleClick(keyValue);
-        // this.calculatorButtons().forEach(button => {
-        //     button.keyboardPressedStyle(keyValue);
-        // });
     }
 }

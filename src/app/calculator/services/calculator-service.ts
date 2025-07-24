@@ -29,6 +29,10 @@ export class CalculatorService {
             return;
         }
 
+        if (this.resultText() === '0' && operators.includes(value) && value !== '-') {
+            return;
+        }
+
         if (value === '=') {
             this.calculateResult();
 
@@ -37,26 +41,38 @@ export class CalculatorService {
 
         if (value === 'RESET') {
             this.resetCalculator();
+
+            return;
         }
 
         if (value === 'DEL') {
             this.deleteLastNumber();
+
+            return;
         }
 
         if (this.resultText() === '0' && value === '-') {
             this.changeToNegativeNumber();
+
+            return;
         }
 
         if (operators.includes(value)) {
             this.addOperatorToCalculate(value);
+
+            return;
         }
 
         if (value === '.' && !this.resultText().includes('.')) {
             this.addDecimals();
+
+            return;
         }
 
         if (numbers.includes(value)) {
             this.setCalculatorNumbers(value);
+
+            return;
         }
 
     }
