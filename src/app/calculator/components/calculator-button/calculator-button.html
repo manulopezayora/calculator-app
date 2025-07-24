@@ -1,3 +1,8 @@
-<button [class.special]="specialButton()" [class.equal]="equalButton()">
+<button
+    [class.special]="specialButton()"
+    [class.equal]="equalButton()"
+    (click)="handleClick()"
+    #button
+>
     <ng-content />
 </button>
