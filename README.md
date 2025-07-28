@@ -1,4 +1,6 @@
-# CalculatorApp
+# Frontend Mentor - Calculator app solution
+
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
 
@@ -10,50 +12,50 @@ To start a local development server, run:
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Table of contents
 
-## Code scaffolding
+- [Frontend Mentor - Calculator app solution](#frontend-mentor---calculator-app-solution)
+  - [Development server](#development-server)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+  - [Author](#author)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-```bash
-ng generate component component-name
-```
+## Overview
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### The challenge
 
-```bash
-ng generate --help
-```
+Users should be able to:
 
-## Building
+- See the size of the elements adjust based on their device's screen size
+- Perform mathmatical operations like addition, subtraction, multiplication, and division
+- Adjust the color theme based on their preference
+- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
-To build the project run:
+### Screenshot
 
-```bash
-ng build
-```
+![](https://manulopezayora.github.io/portfolio/images/calculator-app.webp)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Links
 
-## Running unit tests
+- Live Site URL: [https://calculator-app-manu-lopez.netlify.app/](https://calculator-app-manu-lopez.netlify.app/)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## My process
 
-```bash
-ng test
-```
+### Built with
 
-## Running end-to-end tests
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- [Angular](https://angular.dev/)
 
-For end-to-end (e2e) testing, run:
+## Author
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Website - [manulopezayora.github.io](https://manulopezayora.github.io/portfolio/)
+- LinkedIn - [Manuel Jesús López Martínez](https://www.linkedin.com/in/manulopezayora/)
