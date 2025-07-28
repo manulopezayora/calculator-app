@@ -2,6 +2,8 @@ import { NgStyle } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { Theme, ThemeService } from '../../services/theme/theme-service';
 
+const THEMES: Theme[] = ['dark', 'light', 'purple']
+
 @Component({
     selector: 'theme-config',
     imports: [NgStyle],
@@ -10,13 +12,22 @@ import { Theme, ThemeService } from '../../services/theme/theme-service';
 })
 export class ThemeConfig {
     private themeService = inject(ThemeService);
-    themes: Theme[] = ['dark', 'light', 'purple'];
 
     public theme = computed(() => this.themeService.currentTheme());
 
+    public onToggleClick(event: MouseEvent): void {
+        const toggle = (event.currentTarget as HTMLElement);
+        const rect = toggle.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        const segmentWidth = rect.width / 3;
+
+        const newValue = Math.floor(clickX / segmentWidth);
+        this.themeService.setTheme(THEMES[newValue]);
+    }
+
     public onThemeChange(event: Event): void {
         const value = (event.target as HTMLInputElement).value;
-        this.themeService.setTheme(this.themes[Number(value)]);
+        this.themeService.setTheme(THEMES[Number(value)]);
     }
 
     public getThumbPosition(): string {

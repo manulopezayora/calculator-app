@@ -8,7 +8,7 @@
                 <span>2</span>
                 <span>3</span>
             </div>
-            <div class="toggle-switch">
+            <div class="toggle-switch" (click)="onToggleClick($event)">
                 <div class="toggle-thumb" [ngStyle]="{ left: getThumbPosition() }"></div>
                 <input type="range" min="0" max="2" [value]="theme()" (input)="onThemeChange($event)"
                     class="range-input" />
