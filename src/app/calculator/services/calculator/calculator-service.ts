@@ -107,8 +107,6 @@ export class CalculatorService {
         this.resultText.set('0');
         this.subResultText.set('0');
         this.lastOperator.set('+');
-
-        return;
     }
 
     private deleteLastNumber(): void {
@@ -130,8 +128,6 @@ export class CalculatorService {
         }
 
         this.resultText.update((currentValue) => currentValue.slice(0, -1));
-
-        return;
     }
 
     private setCalculatorNumbers(value: string): void {
@@ -148,8 +144,6 @@ export class CalculatorService {
         }
 
         this.resultText.update((currentValue) => currentValue + value);
-
-        return;
     }
 
     private addOperatorToCalculate(value: string): void {
@@ -157,8 +151,6 @@ export class CalculatorService {
         this.lastOperator.set(value);
         this.subResultText.set(this.resultText());
         this.resultText.set('0');
-
-        return;
     }
 
     private addDecimals(): void {
@@ -169,8 +161,6 @@ export class CalculatorService {
         }
 
         this.resultText.update((currentValue) => currentValue + '.');
-
-        return;
     }
 
     private changeToNegativeNumber() {
@@ -181,8 +171,6 @@ export class CalculatorService {
         }
 
         this.resultText.update(currentValue => '-' + currentValue);
-
-        return;
     }
 
 }
