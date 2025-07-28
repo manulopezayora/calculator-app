@@ -1,6 +1,6 @@
 import { NgStyle } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
-import { Theme, ThemeService } from '../../services/theme-service';
+import { Theme, ThemeService } from '../../services/theme/theme-service';
 
 @Component({
     selector: 'theme-config',

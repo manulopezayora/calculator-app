@@ -6,8 +6,6 @@ export type Theme = 'dark' | 'light' | 'purple';
     providedIn: 'root'
 })
 export class ThemeService {
-    private readonly storageKey = 'preferred-theme';
-
     private themes: Record<Theme, Record<string, string>> = {
         'dark': {
             '--main-background': 'hsl(222, 26%, 31%)',
@@ -68,23 +66,16 @@ export class ThemeService {
     private currentThemeSignal = signal<Theme>(this.getInitialTheme());
     readonly currentTheme = computed(() => this.currentThemeSignal());
 
-
     constructor() {
         this.applyTheme(this.currentThemeSignal());
     }
 
     setTheme(theme: Theme) {
         this.currentThemeSignal.set(theme);
-        localStorage.setItem(this.storageKey, theme);
         this.applyTheme(theme);
     }
 
     private getInitialTheme(): Theme {
-        const saved = localStorage.getItem(this.storageKey) as Theme | null;
-        if (saved) {
-            return saved;
-        };
-
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         return prefersDark ? 'dark' : 'light';
     }

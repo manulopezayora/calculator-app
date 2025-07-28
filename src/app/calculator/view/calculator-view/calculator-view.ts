@@ -3,7 +3,7 @@ import { Component, computed, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CalculatorButton } from "../../components/calculator-button/calculator-button";
 import { ThemeConfig } from "../../components/theme-config/theme-config";
-import { CalculatorService } from '../../services/calculator-service';
+import { CalculatorService } from '../../services/calculator/calculator-service';
 
 const KEY_EQUIVALENTS: Record<string, string> = {
     Backspace: 'DEL',
