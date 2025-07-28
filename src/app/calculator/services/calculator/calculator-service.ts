@@ -25,6 +25,10 @@ export class CalculatorService {
             return;
         }
 
+        if (value === '=' && this.resultText() === '0' && this.lastOperator() === '/') {
+            return;
+        }
+
         if (value === '0' && (this.resultText() === '0' || this.resultText() === '-0')) {
             return;
         }
